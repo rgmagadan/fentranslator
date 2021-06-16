@@ -16,14 +16,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     if '-' in fen:
       pos=''.join(fen[0].split('/'))
       turno = fen[1]
-    blancas=[]
-    negras=[]
-    n=0
     if 'w' in turno:
       turno ='Juegan las blancas:'
     elif 'b' in turno:
       turno ='Juegan las negras:'
     numbers=['1','2','3','4','5','6','7','8']
+    blancas=[]
+    negras=[]
+    n=0
     for c in pos:
       if c in numbers:
         n += int(c)
