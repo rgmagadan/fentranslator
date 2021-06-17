@@ -6,6 +6,6 @@ Un código FEN es algo como esto: [FEN "8/8/2P2k2/B2Kb3/5p2/8/8/8 w - - 0 1"].
 
 ## La descarga
 
-Puedes abrir el archivo [fentranslator.py](https://raw.githubusercontent.com/rgmagadan/fentranslator/main/FENTranslator.py) en la tabla de archivos que se muestra y buscar el botón Raw en la página que se abre con el código, y luego usar la función de "Guardar como" del menú Archivo de tu navegador.
+Puedes abrir el archivo [FENTranslator.py](https://raw.githubusercontent.com/rgmagadan/fentranslator/main/FENTranslator.py) en la tabla de archivos que se muestra y buscar el botón Raw en la página que se abre con el código, y luego usar la función de "Guardar como" del menú Archivo de tu navegador.
 
 Pruébalo y cuéntame qué te parece.

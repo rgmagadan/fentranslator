@@ -5,9 +5,9 @@ import ui
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
   def orden(self, letras):
-    piezas = "kqrbnp"
+    piezas = "KQRBNP/kqrbnp"
     for i in range(len(piezas)):
-      if piezas[i] == str.lower(letras[0]):
+      if piezas[i] == letras[0]:
         return i
 
   def script_showText(self, gesture):
@@ -21,21 +21,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     elif 'b' in turno:
       turno ='Juegan las negras:'
     numbers=['1','2','3','4','5','6','7','8']
-    blancas=[]
-    negras=[]
+    piezas = ['/']
     n=0
     for c in pos:
       if c in numbers:
         n += int(c)
-      elif c.islower():
-        negras.append(c+board[n])
-        n+=1
       else:
-        blancas.append(c+board[n])
+        piezas.append(c+board[n])
         n+=1
-    blancas = sorted(blancas, key=self.orden)
-    negras = sorted(negras, key=self.orden)
-    posicion = turno+'\n'+''.join(blancas)+'/'+''.join(negras)+'\n'
+    piezas = sorted(piezas, key=self.orden)
+    posicion = turno+'\n'+''.join(piezas)
     ui.browseableMessage(posicion)
     api.copyToClip(posicion)
 
